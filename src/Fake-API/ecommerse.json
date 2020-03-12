@@ -1,0 +1,106 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "astrilalia",
+      "password": "abc123",
+      "email": "astrilaikhlasia@gmail.com",
+      "role": "user"
+    },
+    {
+      "id": 2,
+      "username": "admin",
+      "password": "admin",
+      "email": "admin@gmail.com",
+      "role": "admin"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Jordan 7 Retro Barcelona Nights",
+      "brand": "Jordan",
+      "price": 1350000,
+      "category": "Men",
+      "image": "https://d38t85204sb0x0.cloudfront.net/eyJidWNrZXQiOiJraWNrYXZlbnVlLWFzc2V0cyIsImtleSI6InByb2R1Y3RzLzI2NDgvMDkwY2UyOTMtY2UyMy00M2YzLTlhYmItMWY4OGUxMzhmOWFlLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwMH19fQ=="
+    },
+    {
+      "id": 2,
+      "name": "Jordan 7 Retro Barcelona Nights",
+      "brand": "Jordan",
+      "price": 1350000,
+      "category": "Men",
+      "image": "https://d38t85204sb0x0.cloudfront.net/eyJidWNrZXQiOiJraWNrYXZlbnVlLWFzc2V0cyIsImtleSI6InByb2R1Y3RzLzI2NDgvMDkwY2UyOTMtY2UyMy00M2YzLTlhYmItMWY4OGUxMzhmOWFlLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwMH19fQ=="
+    },
+    {
+      "id": 3,
+      "name": "Jordan 7 Retro Barcelona Nights",
+      "brand": "Jordan",
+      "price": 1350000,
+      "category": "Men",
+      "image": "https://d38t85204sb0x0.cloudfront.net/eyJidWNrZXQiOiJraWNrYXZlbnVlLWFzc2V0cyIsImtleSI6InByb2R1Y3RzLzI2NDgvMDkwY2UyOTMtY2UyMy00M2YzLTlhYmItMWY4OGUxMzhmOWFlLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwMH19fQ=="
+    },
+    {
+      "id": 4,
+      "name": "Jordan 7 Retro Barcelona Nights",
+      "brand": "Jordan",
+      "price": 1350000,
+      "category": "Men",
+      "image": "https://d38t85204sb0x0.cloudfront.net/eyJidWNrZXQiOiJraWNrYXZlbnVlLWFzc2V0cyIsImtleSI6InByb2R1Y3RzLzI2NDgvMDkwY2UyOTMtY2UyMy00M2YzLTlhYmItMWY4OGUxMzhmOWFlLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwMH19fQ=="
+    },
+    {
+      "id": 5,
+      "name": "Jordan 7 Retro Barcelona Nights",
+      "brand": "Jordan",
+      "price": 1350000,
+      "category": "Men",
+      "image": "https://d38t85204sb0x0.cloudfront.net/eyJidWNrZXQiOiJraWNrYXZlbnVlLWFzc2V0cyIsImtleSI6InByb2R1Y3RzLzI2NDgvMDkwY2UyOTMtY2UyMy00M2YzLTlhYmItMWY4OGUxMzhmOWFlLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwMH19fQ=="
+    },
+    {
+      "id": 6,
+      "name": "Jordan 7 Retro Barcelona Nights",
+      "brand": "Jordan",
+      "price": 1350000,
+      "category": "Men",
+      "image": "https://d38t85204sb0x0.cloudfront.net/eyJidWNrZXQiOiJraWNrYXZlbnVlLWFzc2V0cyIsImtleSI6InByb2R1Y3RzLzI2NDgvMDkwY2UyOTMtY2UyMy00M2YzLTlhYmItMWY4OGUxMzhmOWFlLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwMH19fQ=="
+    },
+    {
+      "id": 7,
+      "name": "Jordan 7 Retro Barcelona Nights",
+      "brand": "Jordan",
+      "price": 1350000,
+      "category": "Men",
+      "image": "https://d38t85204sb0x0.cloudfront.net/eyJidWNrZXQiOiJraWNrYXZlbnVlLWFzc2V0cyIsImtleSI6InByb2R1Y3RzLzI2NDgvMDkwY2UyOTMtY2UyMy00M2YzLTlhYmItMWY4OGUxMzhmOWFlLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwMH19fQ=="
+    },
+    {
+      "id": 8,
+      "name": "Jordan 7 Retro Barcelona Nights",
+      "brand": "Jordan",
+      "price": 1350000,
+      "category": "Men",
+      "image": "https://d38t85204sb0x0.cloudfront.net/eyJidWNrZXQiOiJraWNrYXZlbnVlLWFzc2V0cyIsImtleSI6InByb2R1Y3RzLzI2NDgvMDkwY2UyOTMtY2UyMy00M2YzLTlhYmItMWY4OGUxMzhmOWFlLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjUwMH19fQ=="
+    },
+    {
+      "name": "daasda",
+      "brand": "sadasd",
+      "price": 232423,
+      "category": "Men",
+      "image": "",
+      "id": 9
+    }
+  ],
+  "latihan": [
+    {
+      "nama": "astrila",
+      "boolean": "true",
+      "laptop": "Asus",
+      "id": 1
+    },
+    {
+      "nama": "Rita",
+      "boolean": "True",
+      "laptop": "MacBook",
+      "id": 2
+    }
+  ]
+}
