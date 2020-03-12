@@ -19,6 +19,10 @@ export const Login = (username, password) => {
         // Data yang diambil dari axios mau ditaro di global state
         Axios.get(`${API_URL}/users?username=${username}&password=${password}`)
         .then((res) => {
+            //bikin if untuk kalo login gagal
+            if(res.data.length === 0){
+                window.alert('Login Failed')
+            }
             console.log(res.data)
             localStorage.setItem('token', JSON.stringify({username, password}))
             //function yang kasih action ke reducer
