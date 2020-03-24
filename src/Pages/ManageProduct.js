@@ -13,7 +13,21 @@ class ManageProduct extends Component{
 
     //karena mau ambil data pake componentDidMount
     componentDidMount(){
-        this.fetchData()
+        let token = localStorage.getItem('token')
+        let role = JSON.parse(token)
+        Axios.get(`${API_URL}/users`)
+        .then((res) => {
+            console.log(role.role)
+            if(res.data[1].role === role.role){
+                this.fetchData()
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Kamu bukan admin!'
+                })
+            }
+        })
     }
 
     fetchData = () => {
@@ -63,7 +77,7 @@ class ManageProduct extends Component{
                 'Data tersimpan!',
                 'Data telah berubah!',
                 'success'
-              )
+            )
         })
         .catch((err) => {
             console.log(err)
@@ -94,7 +108,7 @@ class ManageProduct extends Component{
                 'Berhasil!',
                 'Data berhasil ditambah!',
                 'success'
-              )
+            )
         })
         .catch((err) => {
             console.log(err)
@@ -111,7 +125,7 @@ class ManageProduct extends Component{
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
             confirmButtonText: 'Yes, delete it!'
-          }).then((result) => {
+        }).then((result) => {
             if (result.value) {
                 Axios.delete(`${API_URL}/products/${id}`)
                 .then((res) => {
@@ -121,13 +135,13 @@ class ManageProduct extends Component{
                         'Deleted!',
                         'Your file has been deleted.',
                         'success'
-                      )
+                    )
                 })
                 .catch((err) => {
                     console.log(err)
                 })
             }
-          })
+        })
     }
 
     renderTable(){
@@ -206,7 +220,7 @@ class ManageProduct extends Component{
                     <tbody>
                         {this.renderTable()}
                     </tbody>
-                    <tfoot>
+                    {/* <tfoot>
                         <tr>
                             <td></td>    
                             <td><input type='text' ref='name' placeholder='Name'/></td>
@@ -226,7 +240,7 @@ class ManageProduct extends Component{
                                 </Button>
                             </td>
                         </tr>
-                    </tfoot>
+                    </tfoot> */}
                 </Table>
             </div>
         )

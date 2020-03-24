@@ -4,7 +4,8 @@ import { Link, Redirect } from 'react-router-dom';
 import axios from 'axios'
 import { API_URL } from '../Support/API_URL';
 import { connect } from 'react-redux';
-import { Login } from '../Redux/Action'
+import { Login } from '../Redux/Action';
+import ReactPasswordStrength from 'react-password-strength';
 
 class LoginPage extends Component {
     state = {  }
@@ -67,20 +68,29 @@ class LoginPage extends Component {
             <div className='d-flex justify-content-center' style={{height : '100vh', alignItems : 'center'}}>
                 <Form style={{width : '400px', height: '400px'}}>
                     <FormGroup>
-                      <Label for="exampleEmail">Username</Label>
-                      <Input type="text" name="email" id="exampleEmail" placeholder="Username" innerRef={(username) => this.username = username}/>
+                        <Label for="exampleEmail">Username</Label>
+                        <Input type="text" name="email" id="exampleEmail" placeholder="Username" innerRef={(username) => this.username = username}/>
                     </FormGroup>
                     <FormGroup>
-                      <Label for="examplePassword">Email</Label>
-                      <Input type="text" name="password" id="examplePassword" placeholder="Email" innerRef={(email) => this.email = email}/>
+                        <Label for="examplePassword">Email</Label>
+                        <Input type="text" name="password" id="examplePassword" placeholder="Email" innerRef={(email) => this.email = email}/>
                     </FormGroup>
                     <FormGroup>
-                      <Label for="examplePassword">Password</Label>
-                      <Input type="password" name="password" id="examplePassword" placeholder="Password" innerRef={(password) => this.password = password}/>
+                        <Label for="examplePassword">Password</Label>
+                        <Input type="password" name="password" id="examplePassword" placeholder="Password" innerRef={(password) => this.password = password}/>
+                        <ReactPasswordStrength
+                        className="customClass"
+                        style={{ display: 'none' }}
+                        minLength={5}
+                        minScore={2}
+                        scoreWords={['weak', 'okay', 'good', 'strong', 'stronger']}
+                        changeCallback={foo}
+                        inputProps={{ name: "password_input", autoComplete: "off", className: "form-control" }}
+                        />
                     </FormGroup>
                     <FormGroup>
-                      <Label for="examplePassword">Confirm Password</Label>
-                      <Input type="password" name="password" id="examplePassword" placeholder="Password" innerRef={(confirmPass) => this.confirmPass = confirmPass}/>
+                        <Label for="examplePassword">Confirm Password</Label>
+                        <Input type="password" name="password" id="examplePassword" placeholder="Password" innerRef={(confirmPass) => this.confirmPass = confirmPass}/>
                     </FormGroup>
                     <div style={{display: 'flex', justifyContent: 'space-around'}}>
                         <Button onClick={this.onBtnRegister}>

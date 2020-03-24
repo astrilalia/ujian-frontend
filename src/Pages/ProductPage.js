@@ -59,8 +59,13 @@ render () {
     }
     return(
         <div className='d-flex'>
-            <div style={{display:'flex', justifyContent:'center'}}>
-                {this.renderProductCard()}
+            <div className='col-2'>
+                haloo
+            </div>
+            <div className='col-10'>
+                <div style={{display:'flex', flexWrap:'wrap', justifyContent:'center'}}>
+                    {this.renderProductCard()}
+                </div>
             </div>
         </div>
     )

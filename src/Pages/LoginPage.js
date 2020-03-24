@@ -61,12 +61,12 @@ class LoginPage extends Component {
             <div className='d-flex justify-content-center' style={{height : '100vh', alignItems : 'center'}}>
                 <Form style={{width : '400px', height: '400px'}}>
                     <FormGroup>
-                      <Label for="exampleEmail">Username</Label>
-                      <Input type="text" name="email" id="exampleEmail" placeholder="Username" innerRef={(username) => this.username = username} />
+                        <Label for="exampleEmail">Username</Label>
+                        <Input type="text" name="email" id="exampleEmail" placeholder="Username" innerRef={(username) => this.username = username} />
                     </FormGroup>
                     <FormGroup>
-                      <Label for="examplePassword">Password</Label>
-                      <Input type="password" name="password" id="examplePassword" placeholder="Password" innerRef={(password) => this.password = password} />
+                        <Label for="examplePassword">Password</Label>
+                        <Input type="password" name="password" id="examplePassword" placeholder="Password" innerRef={(password) => this.password = password} />
                     </FormGroup>
                     <div style={{display: 'flex', justifyContent: 'space-around'}}>
                         <Button onClick={this.onBtnLogin}>
@@ -90,5 +90,5 @@ const mapStateofProps = (state) => {
         logged : state.auth.logged
     }
 }
- 
+
 export default connect(mapStateofProps, { Login })(LoginPage);

@@ -24,7 +24,13 @@ export const Login = (username, password) => {
                 window.alert('Login Failed')
             }
             console.log(res.data)
-            localStorage.setItem('token', JSON.stringify({username, password}))
+            // localstorage= untuk nyimpan data biar tetep login
+            localStorage.setItem('token', JSON.stringify({
+                username: res.data[0].username,
+                password: res.data[0].password,
+                id: res.data[0].id,
+                role: res.data[0].role
+            }))
             //function yang kasih action ke reducer
             dispatch({
                 type: 'LOGIN',
@@ -32,7 +38,6 @@ export const Login = (username, password) => {
             })
         })
         .catch((err) => {
-            console.log(err)
             dispatch({
                 type: 'LOGOUT'
             })
@@ -45,6 +50,7 @@ export const keepLogin = (token) => {
         let { username, password } = token;
         Axios.get(`${API_URL}/users?username=${username}&password=${password}`)
         .then((res) => {
+            console.log(res.data)
             dispatch({
                 type: 'LOGIN',
                 payload: res.data[0]

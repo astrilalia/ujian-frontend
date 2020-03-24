@@ -27,7 +27,7 @@ const Example = (props) => {
 
     }
   });
-  console.log(gState)
+  // console.log(gState)
   const dispatch = useDispatch();
   const logOut = () => {
     dispatch(Logout())
@@ -65,12 +65,16 @@ const Example = (props) => {
                 gState.logged
                 ?
                 <DropdownMenu right>
-                    <DropdownItem>
-                      Cart
-                    </DropdownItem>
-                    <DropdownItem>
-                      Transaction History
-                    </DropdownItem>
+                    <Link to ='/cart'>
+                      <DropdownItem>
+                        Cart
+                      </DropdownItem>
+                    </Link>
+                    <Link to ='/transaction'>
+                      <DropdownItem>
+                        Transaction History
+                      </DropdownItem>
+                    </Link>
                     <DropdownItem>
                       Profile
                     </DropdownItem>

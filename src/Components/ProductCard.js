@@ -8,8 +8,8 @@ const CardHome = (props) => {
 
     const { image, name, brand, price } = props
   return (
-    <div>
-      <Card>
+    <div style={{width:'220px', justifyContent:'center', textAlign:'center'}} className='m-3'>
+      <Card style={{width:'230px',height:'350px'}}>
         <CardImg top width="60%" src={image} alt="Card image cap" />
         <CardBody>
             <CardTitle>{name}</CardTitle>

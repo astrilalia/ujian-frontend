@@ -45,7 +45,7 @@ class LatihanAxios extends Component{
 
     // bikin function buat nambah data ke JSON
     onBtnAddData = () => {
-        let { nama, boolean, laptop} = this.state.form
+        let { nama, boolean, laptop } = this.state.form
         // param 1 untuk ambil data, param dua untuk kasih data
         Axios.post('http://localhost:2000/latihan', { nama, boolean, laptop })
         .then((res) => {

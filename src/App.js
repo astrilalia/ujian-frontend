@@ -7,7 +7,7 @@ import Footer from './Components/Footer';
 import LoginPage from './Pages/LoginPage';
 // import RegisterPage from './Pages/RegisterPage'
 import RegisterPage from './Pages/RegisterHooks';
-import ProductPage from './Pages/ProductPage';
+import ProductPage from './Pages/ProductPage'; //ini pakai global state
 import LatihanAxios from './Pages/LatihanAxios';
 import Review from './Pages/Review';
 import ProductDetail from './Pages/ProductDetail';
@@ -15,7 +15,9 @@ import ProductDetail from './Pages/ProductDetail';
 // import { API_URL } from './Support/API_URL';
 import { Login, keepLogin } from './Redux/Action';
 import { connect } from 'react-redux';
-import ManageProduct from './Pages/ManageProduct'
+import ManageProduct from './Pages/ManageProduct';
+import Cart from './Pages/Cart';
+import Transaction from './Pages/transaction';
 
 class App extends Component{
 
@@ -59,8 +61,10 @@ class App extends Component{
         <Route path='/products' component={ProductPage} />
         <Route path='/latihan' component={LatihanAxios} />
         <Route path='/review' component={Review} />
-        <Route path='/product-detail' component={ProductDetail} />
-        <Route path='/manage-product' component={ManageProduct} />
+        <Route path='/product-detail' component={ProductDetail}/>
+        <Route path='/manage-product' component={ManageProduct}/>
+        <Route path='/cart' component={Cart}/>
+        <Route path='/transaction' component={Transaction}/>
         <Footer/>
       </div>
     )
