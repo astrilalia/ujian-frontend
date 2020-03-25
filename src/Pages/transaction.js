@@ -30,34 +30,23 @@ class Transaction extends Component{
         })
     }
 
-    modalBtn = () => {
-        return this.state.data.map((val)=> {
-            return(
-                // Swal.fire({
-                //     title: '<strong></strong>',
-                //     icon: 'info',
-                //     html:
-                //       'You can use <b>bold</b>, ' +
-                //       '<a href="//sweetalert2.github.io">links</a> ' +
-                //       'and other HTML tags',
-                //     showCloseButton: true,
-                //     showCancelButton: true,
-                //     focusConfirm: false,
-                //     confirmButtonText:
-                //       '<i class="fa fa-thumbs-up"></i> Mantap!',
-                //     confirmButtonAriaLabel: 'Thumbs up, great!'
-                //   })
-                <ModalDetail
-                id = {val.id}
-                name = {val.name}
-                image = {val.image}
-                size = {val.size}
-                quantity = {val.qty}
-                price = {val.total}
-                />
-            )
+    modalBtn = (items, date, id, total) => {
+        let innerHTML = `<strong><p>ID: ${id}</p><p>Tanggal: ${date}</p></strong>`
+        items.forEach((val) => {
+            innerHTML += `<img width='30%' src='${val.image}' alt='foto'/>
+            <h5>${val.name}</h5>
+            <p>Size: ${val.size}</p>
+            <p>Quantity: ${val.qty} (@ Rp.${val.price.toLocaleString()})</p>
+            <p>Subtotal: Rp. ${(val.qty * val.price).toLocaleString()}</p>
+            <hr/>
+            `
         })
-            
+        Swal.fire({
+            html: innerHTML + `<strong><p>Total: Rp. ${(total).toLocaleString()}</p></strong>`,
+            confirmButtonText:
+            '<i class="fa fa-thumbs-up"></i> Mantap!',
+            confirmButtonAriaLabel: 'Thumbs up, great!'
+        })   
     }
 
     renderTable(){
@@ -69,7 +58,7 @@ class Transaction extends Component{
                     <td>{val.date}</td>
                     <td>Rp {(val.total.toLocaleString('id-ID'))}</td>
                     <td>
-                        <Button onClick={() => this.modalBtn()}>
+                        <Button onClick={() => this.modalBtn(val.items, val.date, val.id, val.total)}>
                             Details
                         </Button>
                     </td>
